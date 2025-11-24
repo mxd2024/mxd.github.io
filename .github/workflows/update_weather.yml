@@ -1,12 +1,13 @@
 # .github/workflows/update_jma_weather.yml
 name: Update JMA Weather Data
 
+permissions:
+  contents: write   # ← push に必須
+
 on:
-  # 手動実行
   workflow_dispatch:
-  # 例: 毎時 5 分ごと
   schedule:
-    - cron: "5 * * * *"
+    - cron: "*/5 * * * *"   # 5分ごと
 
 jobs:
   update-weather:
@@ -15,7 +16,9 @@ jobs:
     steps:
       # リポジトリをチェックアウト
       - name: Checkout repository
-        uses: actions/checkout@v4
+      uses: actions/checkout@v4
+        with:
+          persist-credentials: true   # push 用
 
       # Python セットアップ
       - name: Set up Python
@@ -29,7 +32,7 @@ jobs:
           pip install --upgrade pip
           pip install requests
 
-      # 気象庁APIからデータ取得して jma_weather.json を生成
+      # JMA 気象データ取得 → JSON 生成
       - name: Fetch JMA weather and write JSON
         run: |
           python << 'EOF'
@@ -112,26 +115,34 @@ jobs:
               except Exception as e:
                   print(f'Error fetching {code}: {e}', file=sys.stderr)
 
-              # API への負荷軽減
               time.sleep(0.2)
 
           with open('jma_weather.json', 'w', encoding='utf-8') as f:
               json.dump(results, f, ensure_ascii=False, indent=2)
+
+          print("jma_weather.json written")
           EOF
 
-      # 変更があればコミット＆プッシュ
+      # Debug: 生成されたファイル確認（必要なら削除OK）
+      - name: Debug list files
+        run: ls -la
+
+      # 差分あればコミット & プッシュ
       - name: Commit and push if changed
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if git diff --quiet jma_weather.json; then
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 新規ファイルも含めてステージング
+          git add jma_weather.json || true
+
+          # ステージされた差分が無ければ終了
+          if git diff --cached --quiet; then
             echo "No changes in jma_weather.json"
             exit 0
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add jma_weather.json
           git commit -m "Update JMA weather data"
           git push
