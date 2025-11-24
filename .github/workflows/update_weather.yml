@@ -1,3 +1,33 @@
+name: Update JMA Weather Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"  # 5分ごと
+
+permissions:
+  contents: write  # push するために必要
+
+jobs:
+  update-weather:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
       - name: Fetch JMA weather and write JSON
         run: |
           python << 'EOF'
@@ -54,29 +84,22 @@
 
                   current_weather = "不明"
 
-                  # data[0].timeSeries のうち、"weathers" を持つ最初の series の
-                  # 先頭エリアの、最初の時間帯（weathers[0]）を採用する
+                  # weathers を持つ最初の timeSeries の先頭エリアの最初の天気を採用
                   series_list = data[0].get("timeSeries", [])
                   for series in series_list:
                       areas = series.get("areas")
                       if not areas:
                           continue
 
-                      # 代表として先頭エリア（例：石狩地方、津軽など）を使う
-                      area = areas[0]
+                      area = areas[0]  # 代表エリア（石狩地方・津軽など）
 
                       weather_list = area.get("weathers")
                       if not weather_list:
                           continue
 
-                      # 最初の時間帯の天気テキスト
                       weather_text = weather_list[0]
                       current_weather = classify_weather(weather_text)
-
-                      # デバッグしたければ一時的に有効化
-                      # print(code, area.get("area", {}).get("name"), weather_text, "=>", current_weather)
-
-                      break  # この series で天気が取れたので抜ける
+                      break
 
                   results["areas"][code] = current_weather
                   print(f'{code}: {current_weather}')
@@ -85,12 +108,28 @@
                   print(f'Error fetching {code}: {e}', file=sys.stderr)
                   results["areas"][code] = "不明"
 
-              # API への負荷を軽減（気持ちのウェイト）
               time.sleep(0.2)
 
-          # ★ シンプルな JSON だけ出力（raw は保存しない）
+          # ★ 天気だけを保存（raw等は書き込まない）
           with open('jma_weather.json', 'w', encoding='utf-8') as f:
               json.dump(results, f, ensure_ascii=False, indent=2)
 
           print("jma_weather.json written")
           EOF
+
+      - name: Commit and push if changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add jma_weather.json || true
+
+          if git diff --cached --quiet; then
+            echo "No changes in jma_weather.json"
+            exit 0
+          fi
+
+          git commit -m "Update JMA weather data"
+          git push
