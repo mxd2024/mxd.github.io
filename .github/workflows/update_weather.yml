@@ -15,10 +15,10 @@ jobs:
 
     steps:
       # リポジトリをチェックアウト
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          persist-credentials: true   # push 用
+          persist-credentials: true
 
       # Python セットアップ
       - name: Set up Python
