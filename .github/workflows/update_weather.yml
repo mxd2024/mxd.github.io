@@ -3,7 +3,7 @@ name: Update JMA Weather Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"  # 5分ごとに実行
+    - cron: "*/5 * * * *"  # 5分ごと
 
 permissions:
   contents: write  # jma_weather.json を push するために必要
@@ -37,32 +37,22 @@ jobs:
           from datetime import datetime
           import time
 
-          # ★ くもり以外は触らない方針の classify_weather
-          def classify_weather(text: str) -> str:
-              if not text:
+          # weatherCodes による分類
+          # 100台=晴れ, 200台=くもり, 300台=雨, 400台=雪
+          def classify_by_code(code: str) -> str:
+              try:
+                  c = int(code)
+              except Exception:
                   return "不明"
 
-              text = text.strip()
-
-              # ひらがな「くもり」が含まれていれば、そのまま「くもり」
-              if "くもり" in text:
+              if 100 <= c < 200:
+                  return "晴れ"
+              if 200 <= c < 300:
                   return "くもり"
-
-              # 漢字「曇」が含まれていれば「くもり」に変換
-              if "曇" in text:
-                  return "くもり"
-
-              # ▼ 以下はくもり以外の既存ロジック（触らない）
-              keywords = [
-                  ("雪", "雪"),
-                  ("雷", "雨"),
-                  ("雨", "雨"),
-                  ("晴", "晴れ"),
-              ]
-
-              for kw, label in keywords:
-                  if kw in text:
-                      return label
+              if 300 <= c < 400:
+                  return "雨"
+              if 400 <= c < 500:
+                  return "雪"
 
               return "不明"
 
@@ -78,56 +68,55 @@ jobs:
               '430000','440000','450000','460100','471000'
           ]
 
-          # 出力は「updated_at と areas だけ」
           results = {
               "updated_at": datetime.utcnow().isoformat() + "Z",
               "areas": {}
           }
 
           for code in area_codes:
-              url = f'{base_url}/{code}.json'
+              url = f"{base_url}/{code}.json"
               try:
                   response = requests.get(url, timeout=30)
                   response.raise_for_status()
                   data = response.json()
 
                   if not data:
-                      print(f'No data for {code}', file=sys.stderr)
+                      print(f"No data for {code}", file=sys.stderr)
                       results["areas"][code] = "不明"
                       continue
 
                   current_weather = "不明"
 
-                  # data[0].timeSeries のうち "weathers" を持つ series の
-                  # 先頭エリアの最初の時間帯 (weathers[0]) を代表として採用
+                  # data[0].timeSeries のうち、weatherCodes を持つ series を探して
+                  # 先頭エリアの先頭 time のコードを採用
                   series_list = data[0].get("timeSeries", [])
                   for series in series_list:
                       areas = series.get("areas")
                       if not areas:
                           continue
 
-                      area = areas[0]  # 例：石狩地方 / 津軽 など
-
-                      weather_list = area.get("weathers")
-                      if not weather_list:
+                      area = areas[0]
+                      weather_codes = area.get("weatherCodes")
+                      if not weather_codes:
                           continue
 
-                      weather_text = weather_list[0]
-                      current_weather = classify_weather(weather_text)
-                      break  # 1つ取れれば十分なので抜ける
+                      # 先頭の時間帯のコード
+                      code0 = weather_codes[0]
+                      current_weather = classify_by_code(code0)
+                      break
 
                   results["areas"][code] = current_weather
-                  print(f'{code}: {current_weather}')
+                  print(f"{code}: {current_weather}")
 
               except Exception as e:
-                  print(f'Error fetching {code}: {e}', file=sys.stderr)
+                  print(f"Error fetching {code}: {e}", file=sys.stderr)
                   results["areas"][code] = "不明"
 
-              # 気象庁APIへの負荷を少し下げる
+              # APIへの負荷軽減
               time.sleep(0.2)
 
-          # ★ 天気だけを書き出すシンプルな JSON
-          with open('jma_weather.json', 'w', encoding='utf-8') as f:
+          # 天気だけを書き出すシンプルなJSON
+          with open("jma_weather.json", "w", encoding="utf-8") as f:
               json.dump(results, f, ensure_ascii=False, indent=2)
 
           print("jma_weather.json written")
@@ -140,7 +129,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # jma_weather.json をステージング
           git add jma_weather.json || true
 
           # ステージされた差分がなければ終了
