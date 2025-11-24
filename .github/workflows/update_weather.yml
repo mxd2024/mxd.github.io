@@ -1,84 +1,137 @@
-
+# .github/workflows/update_jma_weather.yml
 name: Update JMA Weather Data
-run: |
-  python << 'EOF'
-  import requests
-  import json
-  import sys
-  from datetime import datetime
-  import time
 
-  def classify_weather(text: str) -> str:
-      if not text:
-          return "不明"
-      text = text.strip()
-      keywords = [
-          ("雪", "雪"),
-          ("雷", "雨"),
-          ("雨", "雨"),
-          ("曇", "曇り"),
-          ("晴", "晴れ"),
-      ]
-      for kw, label in keywords:
-          if kw in text:
-              return label
-      return "不明"
+on:
+  # 手動実行
+  workflow_dispatch:
+  # 例: 毎時 5 分ごと
+  schedule:
+    - cron: "5 * * * *"
 
-  base_url = 'https://www.jma.go.jp/bosai/forecast/data/forecast'
+jobs:
+  update-weather:
+    runs-on: ubuntu-latest
 
-  area_codes = [
-      '016000','020000','030000','040000','050000','060000','070000',
-      '080000','090000','100000','110000','120000','130000','140000',
-      '150000','160000','170000','180000','190000','200000','210000',
-      '220000','230000','240000','250000','260000','270000','280000',
-      '290000','300000','310000','320000','330000','340000','350000',
-      '360000','370000','380000','390000','400000','410000','420000',
-      '430000','440000','450000','460100','471000'
-  ]
+    steps:
+      # リポジトリをチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  results = {
-      "updated_at": datetime.utcnow().isoformat() + "Z",
-      "areas": {}
-  }
+      # Python セットアップ
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-  for code in area_codes:
-      url = f'{base_url}/{code}.json'
-      try:
-          response = requests.get(url, timeout=30)
-          response.raise_for_status()
-          data = response.json()
+      # 依存パッケージインストール
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests
 
-          if not data:
-              print(f'No data for {code}', file=sys.stderr)
-              continue
+      # 気象庁APIからデータ取得して jma_weather.json を生成
+      - name: Fetch JMA weather and write JSON
+        run: |
+          python << 'EOF'
+          import requests
+          import json
+          import sys
+          from datetime import datetime
+          import time
 
-          current_weather = "不明"
+          def classify_weather(text: str) -> str:
+              if not text:
+                  return "不明"
+              text = text.strip()
+              keywords = [
+                  ("雪", "雪"),
+                  ("雷", "雨"),
+                  ("雨", "雨"),
+                  ("曇", "曇り"),
+                  ("晴", "晴れ"),
+              ]
+              for kw, label in keywords:
+                  if kw in text:
+                      return label
+              return "不明"
 
-          for series in data[0].get("timeSeries", []):
-              if "areas" not in series:
-                  continue
-              for area in series["areas"]:
-                  target_code = area.get("area", {}).get("code")
-                  if target_code and target_code != code:
-                      continue
-                  weather_list = area.get("weathers") or area.get("weatherCodes")
-                  if weather_list:
-                      weather_text = weather_list[0] if isinstance(weather_list, list) else str(weather_list)
-                      current_weather = classify_weather(weather_text)
-                      break
-              if current_weather != "不明":
-                  break
+          base_url = 'https://www.jma.go.jp/bosai/forecast/data/forecast'
 
-          results["areas"][code] = {
-              "weather": current_weather,
-              "raw": data[0]
+          area_codes = [
+              '016000','020000','030000','040000','050000','060000','070000',
+              '080000','090000','100000','110000','120000','130000','140000',
+              '150000','160000','170000','180000','190000','200000','210000',
+              '220000','230000','240000','250000','260000','270000','280000',
+              '290000','300000','310000','320000','330000','340000','350000',
+              '360000','370000','380000','390000','400000','410000','420000',
+              '430000','440000','450000','460100','471000'
+          ]
+
+          results = {
+              "updated_at": datetime.utcnow().isoformat() + "Z",
+              "areas": {}
           }
-          print(f'{code}: {current_weather}')
-      except Exception as e:
-          print(f'Error fetching {code}: {e}', file=sys.stderr)
 
-      time.sleep(0.2)
+          for code in area_codes:
+              url = f'{base_url}/{code}.json'
+              try:
+                  response = requests.get(url, timeout=30)
+                  response.raise_for_status()
+                  data = response.json()
 
-  with open('jma_weather.json', 'w', encoding='utf-8') as f:
-      json.dump(results, f, ensure_ascii=False, indent=2)
-  EOF
+                  if not data:
+                      print(f'No data for {code}', file=sys.stderr)
+                      continue
+
+                  current_weather = "不明"
+
+                  for series in data[0].get("timeSeries", []):
+                      if "areas" not in series:
+                          continue
+                      for area in series["areas"]:
+                          target_code = area.get("area", {}).get("code")
+                          if target_code and target_code != code:
+                              continue
+                          weather_list = area.get("weathers") or area.get("weatherCodes")
+                          if weather_list:
+                              weather_text = (
+                                  weather_list[0]
+                                  if isinstance(weather_list, list)
+                                  else str(weather_list)
+                              )
+                              current_weather = classify_weather(weather_text)
+                              break
+                      if current_weather != "不明":
+                          break
+
+                  results["areas"][code] = {
+                      "weather": current_weather,
+                      "raw": data[0]
+                  }
+                  print(f'{code}: {current_weather}')
+              except Exception as e:
+                  print(f'Error fetching {code}: {e}', file=sys.stderr)
+
+              # API への負荷軽減
+              time.sleep(0.2)
+
+          with open('jma_weather.json', 'w', encoding='utf-8') as f:
+              json.dump(results, f, ensure_ascii=False, indent=2)
+          EOF
+
+      # 変更があればコミット＆プッシュ
+      - name: Commit and push if changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet jma_weather.json; then
+            echo "No changes in jma_weather.json"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add jma_weather.json
+          git commit -m "Update JMA weather data"
+          git push
