@@ -41,13 +41,17 @@ jobs:
               if not text:
                   return "不明"
               text = text.strip()
-              keywords = [
-                  ("雪", "雪"),
-                  ("雷", "雨"),    # 雷雨は「雨」扱い
-                  ("雨", "雨"),
-                  ("曇", "曇り"),  # 「くもり」「時々くもり」など
-                  ("晴", "晴れ"),
-              ]
+          # ★ 次に「曇（漢字）」をくもりへ変換
+          if "曇" in text:
+              return "くもり"
+
+          # ▼ 以下は一切変更しない（元のまま）
+          keywords = [
+              ("雪", "雪"),
+              ("雷", "雨"),
+              ("雨", "雨"),
+              ("晴", "晴れ"),
+          ]
               for kw, label in keywords:
                   if kw in text:
                       return label
