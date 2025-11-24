@@ -3,7 +3,7 @@ name: Update JMA Weather Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"  # 5分ごと
+    - cron: "*/30 * * * *"  # 30分ごと
 
 permissions:
   contents: write  # jma_weather.json を push するために必要
