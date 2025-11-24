@@ -1,4 +1,4 @@
-name: Update JMA Weather Data
+  name: Update JMA Weather Data
   run: |
     python << 'EOF'
     import requests
