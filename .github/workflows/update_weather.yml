@@ -15,7 +15,7 @@ jobs:
 
     steps:
       # リポジトリをチェックアウト
-      - name: Checkout repository
+    - name: Checkout repository
       uses: actions/checkout@v4
         with:
           persist-credentials: true   # push 用
