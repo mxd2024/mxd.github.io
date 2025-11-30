@@ -1,12 +1,12 @@
 {
-  "updated_at": "2025-11-30T07:40:44.783537Z",
+  "updated_at": "2025-11-30T08:44:16.129991Z",
   "areas": {
     "北海道": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "くもり"
     },
     "青森県": {
-      "today": "雨",
+      "today": "くもり",
       "tomorrow": "雨"
     },
     "岩手県": {
@@ -14,16 +14,16 @@
       "tomorrow": "くもり"
     },
     "宮城県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "晴れ"
     },
     "秋田県": {
-      "today": "雨",
+      "today": "くもり",
       "tomorrow": "雨"
     },
     "山形県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "福島県": {
       "today": "晴れ",
