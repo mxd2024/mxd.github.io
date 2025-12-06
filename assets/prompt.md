@@ -1,5 +1,6 @@
 🧭 WELL Cabin AI アテンダント用 プロンプト仕様書（Markdown版）
 1. 共通：方言返し定義（Dialect Rules）
+---
 関東
 
 東京（関東）
