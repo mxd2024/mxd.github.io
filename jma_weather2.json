@@ -1,5 +1,5 @@
 {
-  "updated_at": "2025-12-26T19:17:25.378073Z",
+  "updated_at": "2025-12-26T19:38:31.552566Z",
   "areas": {
     "北海道": {
       "today": "雪",
@@ -7,7 +7,7 @@
     },
     "青森県": {
       "today": "雪",
-      "tomorrow": "雪"
+      "tomorrow": "くもり"
     },
     "岩手県": {
       "today": "雪",
@@ -55,11 +55,11 @@
     },
     "神奈川県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "新潟県": {
       "today": "雪",
-      "tomorrow": "雪"
+      "tomorrow": "雨"
     },
     "富山県": {
       "today": "雪",
@@ -78,11 +78,11 @@
       "tomorrow": "晴れ"
     },
     "長野県": {
-      "today": "雪",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "岐阜県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "静岡県": {
@@ -95,31 +95,31 @@
     },
     "三重県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "滋賀県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "京都府": {
       "today": "くもり",
       "tomorrow": "くもり"
     },
     "大阪府": {
-      "today": "くもり",
-      "tomorrow": "くもり"
+      "today": "晴れ",
+      "tomorrow": "晴れ"
     },
     "兵庫県": {
-      "today": "くもり",
-      "tomorrow": "くもり"
+      "today": "晴れ",
+      "tomorrow": "晴れ"
     },
     "奈良県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "和歌山県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "鳥取県": {
       "today": "雨",
@@ -134,8 +134,8 @@
       "tomorrow": "晴れ"
     },
     "広島県": {
-      "today": "くもり",
-      "tomorrow": "晴れ"
+      "today": "晴れ",
+      "tomorrow": "くもり"
     },
     "山口県": {
       "today": "くもり",
@@ -143,11 +143,11 @@
     },
     "徳島県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "香川県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "愛媛県": {
       "today": "くもり",
