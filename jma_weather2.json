@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-01-01T19:39:49.562704Z",
+  "updated_at": "2026-01-01T20:26:25.389726Z",
   "areas": {
     "北海道": {
       "today": "くもり",
@@ -14,8 +14,8 @@
       "tomorrow": "くもり"
     },
     "宮城県": {
-      "today": "くもり",
-      "tomorrow": "晴れ"
+      "today": "晴れ",
+      "tomorrow": "くもり"
     },
     "秋田県": {
       "today": "雪",
@@ -30,8 +30,8 @@
       "tomorrow": "くもり"
     },
     "茨城県": {
-      "today": "晴れ",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "晴れ"
     },
     "栃木県": {
       "today": "晴れ",
@@ -46,12 +46,12 @@
       "tomorrow": "晴れ"
     },
     "千葉県": {
-      "today": "晴れ",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "晴れ"
     },
     "東京都": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "神奈川県": {
       "today": "くもり",
@@ -74,8 +74,8 @@
       "tomorrow": "雪"
     },
     "山梨県": {
-      "today": "晴れ",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "晴れ"
     },
     "長野県": {
       "today": "くもり",
@@ -86,7 +86,7 @@
       "tomorrow": "くもり"
     },
     "静岡県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "愛知県": {
@@ -94,8 +94,8 @@
       "tomorrow": "くもり"
     },
     "三重県": {
-      "today": "くもり",
-      "tomorrow": "晴れ"
+      "today": "晴れ",
+      "tomorrow": "くもり"
     },
     "滋賀県": {
       "today": "くもり",
