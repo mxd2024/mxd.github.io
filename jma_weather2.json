@@ -1,32 +1,32 @@
 {
-  "updated_at": "2026-01-07T07:47:15.511501Z",
+  "updated_at": "2026-01-07T08:34:07.907822Z",
   "areas": {
     "北海道": {
       "today": "雨",
       "tomorrow": "くもり"
     },
     "青森県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "雪"
     },
     "岩手県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "雪"
     },
     "宮城県": {
       "today": "くもり",
       "tomorrow": "くもり"
     },
     "秋田県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "雪"
     },
     "山形県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "雪"
     },
     "福島県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "くもり"
     },
     "茨城県": {
@@ -38,7 +38,7 @@
       "tomorrow": "晴れ"
     },
     "群馬県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "埼玉県": {
@@ -50,11 +50,11 @@
       "tomorrow": "晴れ"
     },
     "東京都": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "神奈川県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "新潟県": {
@@ -66,19 +66,19 @@
       "tomorrow": "雪"
     },
     "石川県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "雪"
     },
     "福井県": {
       "today": "くもり",
-      "tomorrow": "雨"
+      "tomorrow": "雪"
     },
     "山梨県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "長野県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "くもり"
     },
     "岐阜県": {
@@ -86,11 +86,11 @@
       "tomorrow": "くもり"
     },
     "静岡県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "愛知県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "三重県": {
@@ -122,11 +122,11 @@
       "tomorrow": "くもり"
     },
     "鳥取県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "島根県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "岡山県": {
