@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-01-10T07:40:01.923001Z",
+  "updated_at": "2026-01-10T08:29:27.590715Z",
   "areas": {
     "北海道": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "雪"
     },
     "青森県": {
       "today": "雨",
-      "tomorrow": "雪"
+      "tomorrow": "雨"
     },
     "岩手県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "雪"
     },
     "宮城県": {
@@ -18,7 +18,7 @@
       "tomorrow": "くもり"
     },
     "秋田県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "雪"
     },
     "山形県": {
@@ -27,7 +27,7 @@
     },
     "福島県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "茨城県": {
       "today": "晴れ",
@@ -58,7 +58,7 @@
       "tomorrow": "晴れ"
     },
     "新潟県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "雪"
     },
     "富山県": {
@@ -66,7 +66,7 @@
       "tomorrow": "雪"
     },
     "石川県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "雪"
     },
     "福井県": {
@@ -90,7 +90,7 @@
       "tomorrow": "晴れ"
     },
     "愛知県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "三重県": {
@@ -126,11 +126,11 @@
       "tomorrow": "雪"
     },
     "島根県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "雪"
     },
     "岡山県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "くもり"
     },
     "広島県": {
@@ -150,7 +150,7 @@
       "tomorrow": "くもり"
     },
     "愛媛県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "くもり"
     },
     "高知県": {
@@ -158,20 +158,20 @@
       "tomorrow": "くもり"
     },
     "福岡県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "雪"
     },
     "佐賀県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "長崎県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "熊本県": {
-      "today": "晴れ",
-      "tomorrow": "雨"
+      "today": "くもり",
+      "tomorrow": "雪"
     },
     "大分県": {
       "today": "晴れ",
