@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-01-13T07:26:39.547714Z",
+  "updated_at": "2026-01-13T07:46:07.656231Z",
   "areas": {
     "北海道": {
       "today": "くもり",
@@ -74,7 +74,7 @@
       "tomorrow": "雨"
     },
     "山梨県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "長野県": {
@@ -82,7 +82,7 @@
       "tomorrow": "くもり"
     },
     "岐阜県": {
-      "today": "雨",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "静岡県": {
@@ -94,8 +94,8 @@
       "tomorrow": "くもり"
     },
     "三重県": {
-      "today": "晴れ",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "晴れ"
     },
     "滋賀県": {
       "today": "くもり",
@@ -110,27 +110,27 @@
       "tomorrow": "晴れ"
     },
     "兵庫県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "くもり"
     },
     "奈良県": {
-      "today": "雨",
-      "tomorrow": "晴れ"
+      "today": "くもり",
+      "tomorrow": "くもり"
     },
     "和歌山県": {
       "today": "くもり",
       "tomorrow": "晴れ"
     },
     "鳥取県": {
-      "today": "雨",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "雪"
     },
     "島根県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "くもり"
     },
     "岡山県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "広島県": {
@@ -142,11 +142,11 @@
       "tomorrow": "晴れ"
     },
     "徳島県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "香川県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "愛媛県": {
@@ -170,11 +170,11 @@
       "tomorrow": "晴れ"
     },
     "熊本県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "大分県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "宮崎県": {
@@ -182,11 +182,11 @@
       "tomorrow": "晴れ"
     },
     "鹿児島県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "沖縄県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     }
   }
