@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-12T06:52:50.217752Z",
+  "updated_at": "2026-04-12T08:03:45.423561Z",
   "areas": {
     "北海道": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     },
     "青森県": {
@@ -31,7 +31,7 @@
     },
     "茨城県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "栃木県": {
       "today": "晴れ",
@@ -51,11 +51,11 @@
     },
     "東京都": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "神奈川県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "新潟県": {
       "today": "晴れ",
@@ -83,7 +83,7 @@
     },
     "岐阜県": {
       "today": "晴れ",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "静岡県": {
       "today": "晴れ",
@@ -106,11 +106,11 @@
       "tomorrow": "くもり"
     },
     "大阪府": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "兵庫県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "奈良県": {
@@ -122,47 +122,47 @@
       "tomorrow": "くもり"
     },
     "鳥取県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "島根県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "岡山県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "広島県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "山口県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "徳島県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "香川県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "愛媛県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "高知県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "福岡県": {
-      "today": "晴れ",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "雨"
     },
     "佐賀県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "長崎県": {
@@ -170,11 +170,11 @@
       "tomorrow": "くもり"
     },
     "熊本県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "雨"
     },
     "大分県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "宮崎県": {
@@ -182,11 +182,11 @@
       "tomorrow": "雨"
     },
     "鹿児島県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "雨"
     },
     "沖縄県": {
-      "today": "くもり",
+      "today": "晴れ",
       "tomorrow": "晴れ"
     }
   }
