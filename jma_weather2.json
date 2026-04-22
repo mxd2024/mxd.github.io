@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T19:46:32.220809Z",
+  "updated_at": "2026-04-22T20:57:14.650616Z",
   "areas": {
     "北海道": {
       "today": "晴れ",
@@ -86,16 +86,16 @@
       "tomorrow": "くもり"
     },
     "静岡県": {
-      "today": "くもり",
-      "tomorrow": "雨"
+      "today": "雨",
+      "tomorrow": "くもり"
     },
     "愛知県": {
-      "today": "くもり",
-      "tomorrow": "雨"
+      "today": "雨",
+      "tomorrow": "くもり"
     },
     "三重県": {
-      "today": "くもり",
-      "tomorrow": "雨"
+      "today": "雨",
+      "tomorrow": "くもり"
     },
     "滋賀県": {
       "today": "雨",
