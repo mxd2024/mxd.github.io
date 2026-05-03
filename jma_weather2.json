@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-03T18:11:02.895355Z",
+  "updated_at": "2026-05-03T19:33:35.553336Z",
   "areas": {
     "北海道": {
       "today": "くもり",
@@ -34,8 +34,8 @@
       "tomorrow": "雨"
     },
     "栃木県": {
-      "today": "くもり",
-      "tomorrow": "くもり"
+      "today": "晴れ",
+      "tomorrow": "晴れ"
     },
     "群馬県": {
       "today": "くもり",
@@ -114,12 +114,12 @@
       "tomorrow": "くもり"
     },
     "奈良県": {
-      "today": "雨",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "晴れ"
     },
     "和歌山県": {
-      "today": "雨",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "晴れ"
     },
     "鳥取県": {
       "today": "雨",
