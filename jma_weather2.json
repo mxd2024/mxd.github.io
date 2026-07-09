@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-09T19:07:40.105492Z",
+  "updated_at": "2026-07-09T21:03:59.268923Z",
   "areas": {
     "北海道": {
-      "today": "くもり",
-      "tomorrow": "くもり"
+      "today": "雨",
+      "tomorrow": "雨"
     },
     "青森県": {
       "today": "くもり",
@@ -14,20 +14,20 @@
       "tomorrow": "くもり"
     },
     "宮城県": {
-      "today": "くもり",
-      "tomorrow": "晴れ"
+      "today": "晴れ",
+      "tomorrow": "くもり"
     },
     "秋田県": {
-      "today": "くもり",
-      "tomorrow": "晴れ"
+      "today": "晴れ",
+      "tomorrow": "くもり"
     },
     "山形県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "福島県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "茨城県": {
       "today": "晴れ",
@@ -35,11 +35,11 @@
     },
     "栃木県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "群馬県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "埼玉県": {
       "today": "晴れ",
@@ -59,7 +59,7 @@
     },
     "新潟県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "富山県": {
       "today": "晴れ",
@@ -79,23 +79,23 @@
     },
     "長野県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "岐阜県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "静岡県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "愛知県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "三重県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "滋賀県": {
       "today": "晴れ",
@@ -175,19 +175,19 @@
     },
     "大分県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "宮崎県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "鹿児島県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "沖縄県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "雨"
     }
   }
 }
