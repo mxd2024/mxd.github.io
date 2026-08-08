@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T07:50:39.779596Z",
+  "updated_at": "2026-08-08T08:42:02.772740Z",
   "areas": {
     "北海道": {
       "today": "晴れ",
@@ -10,8 +10,8 @@
       "tomorrow": "くもり"
     },
     "岩手県": {
-      "today": "雨",
-      "tomorrow": "くもり"
+      "today": "不明",
+      "tomorrow": "不明"
     },
     "宮城県": {
       "today": "くもり",
@@ -142,12 +142,12 @@
       "tomorrow": "くもり"
     },
     "徳島県": {
-      "today": "晴れ",
-      "tomorrow": "晴れ"
+      "today": "不明",
+      "tomorrow": "不明"
     },
     "香川県": {
-      "today": "晴れ",
-      "tomorrow": "晴れ"
+      "today": "不明",
+      "tomorrow": "不明"
     },
     "愛媛県": {
       "today": "晴れ",
