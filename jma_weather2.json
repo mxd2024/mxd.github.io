@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T10:48:31.209846Z",
+  "updated_at": "2026-08-15T11:20:41.343408Z",
   "areas": {
     "北海道": {
       "today": "晴れ",
@@ -42,20 +42,20 @@
       "tomorrow": "くもり"
     },
     "埼玉県": {
-      "today": "不明",
-      "tomorrow": "不明"
+      "today": "くもり",
+      "tomorrow": "くもり"
     },
     "千葉県": {
       "today": "晴れ",
       "tomorrow": "くもり"
     },
     "東京都": {
-      "today": "不明",
-      "tomorrow": "不明"
+      "today": "くもり",
+      "tomorrow": "くもり"
     },
     "神奈川県": {
-      "today": "不明",
-      "tomorrow": "不明"
+      "today": "くもり",
+      "tomorrow": "くもり"
     },
     "新潟県": {
       "today": "晴れ",
@@ -114,8 +114,8 @@
       "tomorrow": "くもり"
     },
     "奈良県": {
-      "today": "不明",
-      "tomorrow": "不明"
+      "today": "くもり",
+      "tomorrow": "くもり"
     },
     "和歌山県": {
       "today": "くもり",
