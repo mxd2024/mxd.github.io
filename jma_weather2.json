@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-09-08T19:30:11.790045Z",
+  "updated_at": "2026-09-08T22:25:11.869882Z",
   "areas": {
     "北海道": {
-      "today": "雨",
-      "tomorrow": "くもり"
+      "today": "くもり",
+      "tomorrow": "晴れ"
     },
     "青森県": {
       "today": "くもり",
-      "tomorrow": "くもり"
+      "tomorrow": "晴れ"
     },
     "岩手県": {
-      "today": "くもり",
-      "tomorrow": "雨"
+      "today": "雨",
+      "tomorrow": "くもり"
     },
     "宮城県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "秋田県": {
       "today": "くもり",
@@ -23,22 +23,22 @@
     },
     "山形県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "福島県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "雨"
     },
     "茨城県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "くもり"
     },
     "栃木県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "くもり"
     },
     "群馬県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "くもり"
     },
     "埼玉県": {
@@ -51,91 +51,91 @@
     },
     "東京都": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "神奈川県": {
-      "today": "くもり",
+      "today": "雨",
       "tomorrow": "くもり"
     },
     "新潟県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "富山県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "石川県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "福井県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "山梨県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "長野県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "岐阜県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "静岡県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "愛知県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "三重県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "滋賀県": {
-      "today": "くもり",
-      "tomorrow": "雨"
+      "today": "雨",
+      "tomorrow": "くもり"
     },
     "京都府": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "大阪府": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "兵庫県": {
-      "today": "くもり",
-      "tomorrow": "雨"
+      "today": "雨",
+      "tomorrow": "くもり"
     },
     "奈良県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "和歌山県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "鳥取県": {
-      "today": "くもり",
-      "tomorrow": "雨"
+      "today": "雨",
+      "tomorrow": "くもり"
     },
     "島根県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "岡山県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "広島県": {
       "today": "くもり",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "山口県": {
       "today": "くもり",
@@ -143,19 +143,19 @@
     },
     "徳島県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "香川県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "愛媛県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "高知県": {
       "today": "雨",
-      "tomorrow": "雨"
+      "tomorrow": "くもり"
     },
     "福岡県": {
       "today": "くもり",
@@ -166,7 +166,7 @@
       "tomorrow": "くもり"
     },
     "長崎県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     },
     "熊本県": {
@@ -179,14 +179,14 @@
     },
     "宮崎県": {
       "today": "くもり",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "鹿児島県": {
       "today": "晴れ",
-      "tomorrow": "晴れ"
+      "tomorrow": "くもり"
     },
     "沖縄県": {
-      "today": "晴れ",
+      "today": "くもり",
       "tomorrow": "くもり"
     }
   }
